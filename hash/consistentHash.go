@@ -11,6 +11,8 @@ import (
 Chord算法实现一致性哈希
 */
 
+const defaultReplicas = 3
+
 type Hash func(data []byte) uint32
 
 // Map 路由表

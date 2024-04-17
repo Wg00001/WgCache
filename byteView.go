@@ -4,19 +4,19 @@ package wgCache
 
 // ByteView 一个只读的数据结构，用来表示缓存值
 type ByteView struct {
-	arr []byte
+	bytes []byte
 }
 
 func (v ByteView) Len() int {
-	return len(v.arr)
+	return len(v.bytes)
 }
 
 func (v ByteView) String() string {
-	return string(v.arr)
+	return string(v.bytes)
 }
 
 func (v ByteView) ByteSlice() []byte {
-	return cloneBytes(v.arr)
+	return cloneBytes(v.bytes)
 }
 
 func cloneBytes(b []byte) []byte {
